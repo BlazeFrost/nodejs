@@ -1,0 +1,40 @@
+.nav-tabs-custom {
+    gap: 0.5rem;
+}
+
+.nav-tabs-custom .nav-link {
+    border: none;
+    background: #1a1a2e;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs-custom .nav-link.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-link:hover {
+    color: #00f2fe;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: cyan;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
