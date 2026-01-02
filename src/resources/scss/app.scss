@@ -38,3 +38,64 @@
 .nav-link:hover::after {
     width: 100%;
 }
+
+.hero-carousel {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* Main image */
+.hero-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+/* Left text overlay */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 400px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    opacity: 0.9;
+}
+
+/* Thumbnails bottom-right */
+.hero-thumbnails {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.hero-thumbnails .thumb {
+    border: none;
+    background: none;
+    padding: 0;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.hero-thumbnails .thumb img {
+    width: 90px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.hero-thumbnails .thumb.active {
+    opacity: 1;
+    transform: scale(1.1);
+}

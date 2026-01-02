@@ -12,4 +12,4 @@ class newController{
 
 module.exports = new newController()
 
-//const newController = require('./newcontroller')
+//const newController = require('./newcontroller')  

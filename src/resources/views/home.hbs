@@ -1,0 +1,52 @@
+<div class="mt-4">
+        
+            <div class="carousel slide" id="democarousel" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    {{#each course }}
+                    <div class="carousel-item {{#if @first}}active{{/if}}">
+                        <img src="{{this.image}}" class="hero-img">
+                        <div class="hero-content">
+                            <h5>{{this.title}}</h5>
+                            <p>{{this.description}}</p>
+                            <button class="btn btn-dark">More</button>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+
+            <div class="hero-thumbnails">   
+                {{#each course }}
+                <button type="button" data-bs-target="#democarousel" data-bs-slide-to="{{@index}}" class="thumb {{#if @first}}active{{/if}}"></button>
+                    <img src="{{this.image}}" class="thumb-img">
+                {{/each}}
+            </div>
+        
+
+        <div class="comic-hompage">
+            <div class="container">
+            {{#each manga}}
+                <div class="cover">
+                    {{this.active}}
+                </div>
+
+                <div class="reel" style="position: relative;">
+                    {{this.section}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+        <div class="news">
+            <div class="section-wrapper">
+                <section class="section-news g--container section">
+                    {{#each news}}
+                    <header>Lastest Update</header>
+                    <div class="container">
+                        {{news.recent}}
+                    </div>
+                    {{/each}}
+                </section>
+            </div>
+        </div>
+</div>
